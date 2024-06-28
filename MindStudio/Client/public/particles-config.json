@@ -1,0 +1,64 @@
+{
+    "particles": {
+      "number": {
+        "value": 50,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "shape": {
+        "type": "image",
+        "image": [
+          {
+            "src": "https://twemoji.maxcdn.com/v/latest/72x72/1f600.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "src": "https://twemoji.maxcdn.com/v/latest/72x72/1f60d.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "src": "https://twemoji.maxcdn.com/v/latest/72x72/1f609.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "src": "https://twemoji.maxcdn.com/v/latest/72x72/1f923.png",
+            "width": 72,
+            "height": 72
+          }
+        ]
+      },
+      "opacity": {
+        "value": 0.8,
+        "random": true
+      },
+      "size": {
+        "value": 50,
+        "random": true
+      },
+      "move": {
+        "enable": true,
+        "speed": 3,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      }
+    },
+    "retina_detect": true
+  }
+  

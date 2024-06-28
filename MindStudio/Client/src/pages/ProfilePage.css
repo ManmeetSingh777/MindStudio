@@ -1,0 +1,29 @@
+.profile-page {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f5cba7; /* Primary color */
+    padding: 20px;
+    color: #ffffff; /* Text color white */
+  }
+  
+  .sidebar h2 {
+    color: #ffffff; /* Text color white */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,44 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-pale-pink);
+  padding: 40px 20px;
+  color: var(--text-dark-brown);
+}
+
+.character {
+  height: 150px;
+  margin-right: 20px;
+}
+
+.cta {
+  text-align: left;
+}
+
+.cta h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.cta p {
+  font-size: 1.2em;
+}
+
+.cta-button {
+  background-color: var(--accent-soft-coral);
+  border: none;
+  color: var(--primary-light-peach);
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-warm-beige);
+  transform: scale(1.05);
+}

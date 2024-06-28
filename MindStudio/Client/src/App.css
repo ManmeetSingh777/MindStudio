@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--primary-cream);
+  color: var(--text-soft-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  color: var(--text-dark-brown);
+}
+
+a {
+  color: var(--accent-soft-coral);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* src/App.css */
+.App {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* Ensures the particles are behind other content */
+}
+
+.landing-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+

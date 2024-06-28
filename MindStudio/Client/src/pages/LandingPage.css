@@ -1,0 +1,73 @@
+/* src/LandingPage.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  margin-top: 80px; /* To account for the height of the navbar */
+}
+
+.landing-page .video-section {
+  width: 100% !important;
+  height: 1200px !important; /* Full height of the viewport */
+  background-color: white !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 20px !important;
+}
+
+.landing-page .intro-video {
+  height: 400px !important;
+  width: 600px !important; /* Adjust width for the video */
+  border: 5px solid #FFD700 !important; /* Golden border for video */
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  perspective: 100px;
+  margin-top: -389px ;
+}
+
+.hero-heading {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+.hero-subheading {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
