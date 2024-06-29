@@ -7,6 +7,7 @@ import FaqPage from './pages/FAQPage';
 import ContactUs from './pages/ContactUsPage';
 import Events from './pages/EventsPage';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage'; // Import the RegisterPage component
 import BookingComponent from './pages/BookingPage';
 import AdminPage from './pages/AdminPage';
 import Navbar from './components/MagicNavbar';
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} /> {/* Add the register route */}
           <Route path="/booking/:therapistId" element={<BookingComponent />} />
           <Route path="/oauth/callback" element={<OAuthCallback />} />
           <Route path="/admin" element={<AdminRoute element={<AdminPage />} />} />

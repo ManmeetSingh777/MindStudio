@@ -1,47 +1,69 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
+import { useAuth } from '../context/AuthContext'; // Import useAuth
 import './LoginPage.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { loginWithGoogle } = useAuth(); // Destructure loginWithGoogle from useAuth
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      console.log('Logging in user:', { email, password });
       const data = await login({ email, password });
       localStorage.setItem('token', data.token);
-      navigate('/'); 
+      navigate('/');
     } catch (err) {
-      console.error('Error during login:', err);
       setError('Login failed. Please try again.');
     }
   };
 
-  const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:5000/api/auth/google';
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle();
+      navigate('/');
+    } catch (err) {
+      setError('Google login failed. Please try again.');
+    }
   };
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleLogin} className="login-form">
-        <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </label>
-        <button type="submit">Login</button>
-      </form>
-      <button onClick={handleGoogleLogin}>Login with Google</button>
-      {error && <p className="error">{error}</p>}
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="login-title">Welcome Back</h1>
+        <form onSubmit={handleLogin} className="login-form">
+          <div className="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="login-button">Login</button>
+        </form>
+        <button onClick={handleGoogleLogin} className="google-login-button">
+          Login with Google
+        </button>
+        {error && <p className="error-message">{error}</p>}
+        <p className="register-link">
+          Don't have an account? <a href="/register">Register here</a>
+        </p>
+      </div>
     </div>
   );
 };
